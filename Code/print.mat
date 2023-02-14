@@ -1,0 +1,52 @@
+clc
+clear all
+N=120;
+M=180;
+
+hline = plot(nan);
+
+hold on;
+    
+while(1)
+    try
+   
+
+   
+    %figure;
+    
+    clf
+    hold on
+    A=dlmread('c:\p_files\matmap.txt');
+   
+    
+    B=A;
+    %A(1, 1) = ~A(1, 1); 
+    for i1 = 1 : 60
+        t=A(i1,:);
+        A(i1,:)=A(120-i1 + 1,:);
+        A(120-i1 + 1,:)=t;
+    end
+
+
+    for i1 = 1 : N
+        for i2 = 1 : M
+            if(A(i1,i2)==1)
+                %set(hline,i2,i1,'blue');
+                plot(i2,i1,'blue*');
+                %%drawnow;
+            end
+            if(A(i1,i2)==2)
+                %set(hline,i2,i1,'red*');
+                plot(i2,i1,'red.')
+                %drawnow;
+            end
+
+        end
+    end
+    drawnow;
+catch exception
+    'error';
+    
+    end
+    pause(2);
+end

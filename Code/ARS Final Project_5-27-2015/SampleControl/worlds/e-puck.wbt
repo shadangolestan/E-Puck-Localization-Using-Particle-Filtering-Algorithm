@@ -1,0 +1,311 @@
+#VRML_SIM V6.0 utf8
+WorldInfo {
+  info [
+    "The model of the E-puck robot"
+    "Author: Simon Blanchoud & Olivier Michel"
+    "Date: 01 SEP 2006"
+  ]
+  title "E-puck"
+  runRealTime TRUE
+}
+Viewpoint {
+  orientation 0.999824 0.0177903 0.0058789 4.86056
+  position -0.0282186 1.59047 0.242404
+}
+PointLight {
+  ambientIntensity 0.5
+  intensity 0.6
+  location 0.14 0.6 -0.55
+  castShadows TRUE
+}
+PointLight {
+  ambientIntensity 0.5
+  intensity 0.6
+  location -0.43 0.6 0.5
+}
+Background {
+  skyColor [
+    0 0.501961 1
+  ]
+}
+DEF FLOOR Solid {
+  translation 0 -0.0001 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+          specularColor 0.196078 0.196078 0.196078
+        }
+        texture ImageTexture {
+          url [
+            "textures/lightwood.png"
+          ]
+        }
+        textureTransform TextureTransform {
+          center 0.46 0
+          rotation -0.32
+          translation -1.01 0
+        }
+      }
+      geometry DEF PLANE Plane {
+        size 0.9 0.6
+      }
+    }
+  ]
+  boundingObject USE PLANE
+}
+DEF WALL1 Solid {
+  translation 0.45 0.05 0
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.6
+      }
+    }
+  ]
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL2 Solid {
+  translation -0.45 0.05 0
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.6
+      }
+    }
+  ]
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL3 Solid {
+  translation 0 0.05 0.3
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.9
+      }
+    }
+  ]
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL4 Solid {
+  translation 0 0.05 -0.3
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.9
+      }
+    }
+  ]
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL3 Solid {
+  translation 0.333 0.05 -0.13
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.215
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.215
+    }
+  }
+}
+DEF WALL3 Solid {
+  translation 0.333 0.05 0.06
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.215
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.215
+    }
+  }
+}
+DEF WALL2 Solid {
+  translation 0.04 0.05 0.207
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.205
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.205
+    }
+  }
+}
+DEF WALL3 Solid {
+  translation -0.2 0.05 0.13
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.2
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.2
+    }
+  }
+}
+DEF WALL2 Solid {
+  translation -0.29 0.05 0.035
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.21
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.21
+    }
+  }
+}
+DEF WALL2 Solid {
+  translation -0.024 0.05 -0.195
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.23
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.23
+    }
+  }
+}
+DEF WALL3 Solid {
+  translation -0.02 0.05 -0.07
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance DEF WALL_APPEARANCE Appearance {
+        material Material {
+          diffuseColor 1 0.501961 0.25098
+        }
+      }
+      geometry Box {
+        size 0.02 0.1 0.2
+      }
+    }
+  ]
+  boundingObject DEF WALL_SHAPE Shape {
+    appearance DEF WALL_APPEARANCE Appearance {
+      material Material {
+        diffuseColor 1 0.501961 0.25098
+      }
+    }
+    geometry Box {
+      size 0.02 0.1 0.2
+    }
+  }
+}
+Supervisor {
+}
+DEF E_PUCK EPuck {
+  translation -0.38 0 0.225
+  controller "e-puck"
+  name "e-puck camera"
+  camera_windowPosition 0.75 0.75
+  camera_pixelSize 4
+}
