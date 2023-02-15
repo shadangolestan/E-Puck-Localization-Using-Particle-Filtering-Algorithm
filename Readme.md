@@ -1,6 +1,9 @@
 # Introduction
 This code contains the main function for a robot localization program using Particle Filtering algorithm written in C. The program is designed to run on e-puck mobile robot and uses its IR sensors. For an introduction to e-puck, please visit: https://cyberbotics.com/doc/guide/epuck
 
+This is the final project of my Advanced Robotics course.
+
+
 # How to use
 To use this program, you need to have the following:
 
