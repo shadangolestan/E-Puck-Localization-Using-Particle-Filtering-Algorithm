@@ -3,6 +3,8 @@ This code contains the main function for a robot localization program using Part
 
 This is the final project of my Advanced Robotics course.
 
+See the below videos for a demostration of the localization process:
+
 
 # How to use
 To use this program, you need to have the following:
